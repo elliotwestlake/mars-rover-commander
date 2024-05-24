@@ -2,7 +2,7 @@ import { describe, it } from "node:test";
 import { executeInstructions } from "./execute-instructions";
 import assert from "node:assert";
 
-describe("execute-instructions.types.ts", () => {
+describe("execute-instructions.test.ts", () => {
   it("should return correct result", () => {
     const result = executeInstructions({
       input: ["5 5", "1 2 N", "LMLMLMLMM", "3 3 E", "MMRMMRMRRM"],
