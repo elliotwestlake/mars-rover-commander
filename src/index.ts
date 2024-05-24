@@ -13,7 +13,7 @@ rl.prompt();
 
 rl.on("line", (line) => {
   if (!input.length && !line) {
-    console.log("Please enter your commands for the rover 🤖\n");
+    console.log("Please enter your instructions for the rover 🤖\n");
     return;
   }
 
