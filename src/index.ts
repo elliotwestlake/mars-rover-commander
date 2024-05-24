@@ -8,7 +8,7 @@ const rl = readline.createInterface({
 
 const input: Array<string> = [];
 
-rl.write("🪐 What's the instructions commander?!\n");
+rl.write("🪐 What are the instructions?\n");
 rl.prompt();
 
 rl.on("line", (line) => {
@@ -23,13 +23,15 @@ rl.on("line", (line) => {
 });
 
 rl.on("close", () => {
-  console.log("Thank you! Processing 🤖\n");
+  // unsure what to do with max plateau coordinates. I have put some suggestions in the README
   const [x, y] = input[0].split(" ");
 
   const output = executeInstructions({ input });
 
   console.log("Here are the results! 🎉\n");
-  output.forEach((item) => console.log(item + "\n"));
+  output.forEach((item, index) =>
+    console.log(`Rover ${index + 1}: ${item} \n`)
+  );
 
   process.exit(0);
 });
