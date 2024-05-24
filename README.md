@@ -2,6 +2,10 @@
 
 Using this high tech interface you can control a mars rover!
 
+## Assumptions
+
+- The rover should not exceed the plateau. In this case I stop the rover from moving further than the plateau, however another solution could be to make it move to the other side of the plateau (like pacman or snake)
+
 ## Notes
 
 - I decided to use node as it's the language I'm most experienced with.
@@ -11,7 +15,6 @@ Using this high tech interface you can control a mars rover!
 - Similarly in the interest of using minimal dependices, I used `node:readline` to read the user input. However it's not the cleanest and something like [prompts](https://www.npmjs.com/package/prompts) may be a better choice.
 - I'm using [tsx](https://www.npmjs.com/package/tsx) to run the application and tests as it's great for running typescript code with zero setup!
 - I used `npm` to generate the lock and run commands in this case, however day to day I often use `pnpm`
-- I was unsure what to do with the top left plateau coords. There's a case where the coords could exceed the plateau coords. The two options I see there would to either move them to the other side (like pacman) or stop the rover at the edge and ignore the instruction.
 
 ### Getting Started
 

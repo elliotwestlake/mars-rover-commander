@@ -1,11 +1,12 @@
 import { Direction } from "../change-direction/change-direction.types";
 
 export type Move = {
-  position: Position;
+  position: Coordinates;
   direction: Direction;
+  plateauSize: Coordinates;
 };
 
-export type Position = {
+export type Coordinates = {
   x: number;
   y: number;
 };

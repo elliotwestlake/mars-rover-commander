@@ -11,8 +11,21 @@ describe("move.test.ts", () => {
       { direction: Direction.S, expected: { x: 1, y: 0 } },
       { direction: Direction.W, expected: { x: 0, y: 1 } },
     ].forEach(({ direction, expected }) => {
-      const position = move({ position: { x: 1, y: 1 }, direction });
+      const position = move({
+        position: { x: 1, y: 1 },
+        direction,
+        plateauSize: { x: 5, y: 5 },
+      });
       assert.deepEqual(position, expected);
     });
+  });
+
+  it("should not execute the plateau size", () => {
+    const position = move({
+      position: { x: 5, y: 5 },
+      direction: Direction.N,
+      plateauSize: { x: 5, y: 5 },
+    });
+    assert.deepEqual(position, { x: 5, y: 5 });
   });
 });

@@ -23,9 +23,6 @@ rl.on("line", (line) => {
 });
 
 rl.on("close", () => {
-  // unsure what to do with max plateau coordinates. I have put some suggestions in the README
-  const [x, y] = input[0].split(" ");
-
   const output = executeInstructions({ input });
 
   console.log("Here are the results! 🎉\n");
