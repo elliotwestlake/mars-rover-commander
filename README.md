@@ -15,6 +15,7 @@ Using this high tech interface you can control a mars rover!
 - Similarly in the interest of using minimal dependices, I used `node:readline` to read the user input. However it's not the cleanest and something like [prompts](https://www.npmjs.com/package/prompts) may be a better choice.
 - I'm using [tsx](https://www.npmjs.com/package/tsx) to run the application and tests as it's great for running typescript code with zero setup!
 - I used `npm` to generate the lock and run commands in this case, however day to day I often use `pnpm`
+- I originally changedDirection based on fixed directions, however I have now implemented a calculation to work out the new direction. I've left the old implementation in for visibility. I think the original implementation is more readable, but the new one is more flexible.
 
 ### Getting Started
 
