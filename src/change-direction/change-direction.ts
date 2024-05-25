@@ -26,7 +26,7 @@ export const changeDirection = ({
 
   if (newDirection === 360) return 0;
 
-  if (newDirection > 360 || newDirection < 0) return 360 + newDirection;
+  if (newDirection < 0) return 360 + newDirection;
 
   return newDirection;
 };
