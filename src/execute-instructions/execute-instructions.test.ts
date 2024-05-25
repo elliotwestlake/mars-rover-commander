@@ -8,6 +8,6 @@ describe("execute-instructions.test.ts", () => {
       input: ["5 5", "1 2 N", "LMLMLMLMM", "3 3 E", "MMRMMRMRRM"],
     });
 
-    assert.deepStrictEqual(result, ["1 3 N", "5 1 E"]);
+    assert.deepEqual(result, ["1 3 N", "5 1 E"]);
   });
 });

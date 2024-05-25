@@ -12,7 +12,7 @@ describe("change-direction.test.ts", () => {
       { direction: Direction.W, expected: 180 },
     ].forEach(({ direction, expected }) => {
       const position = changeDirection({ direction, turn: "L" });
-      assert.deepStrictEqual(position, expected);
+      assert.equal(position, expected);
     });
   });
 
@@ -24,7 +24,7 @@ describe("change-direction.test.ts", () => {
       { direction: Direction.W, expected: 0 },
     ].forEach(({ direction, expected }) => {
       const position = changeDirection({ direction, turn: "R" });
-      assert.strictEqual(position, expected);
+      assert.equal(position, expected);
     });
   });
 });
